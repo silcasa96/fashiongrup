@@ -22,6 +22,9 @@ Auth::routes();
 
 Route::get('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/graph_laporan_harian_pusat', [App\Http\Controllers\HomeController::class, 'graph_laporan_harian_pusat'])->name('graph_laporan_harian_pusat');
+Route::get('/graph_laporan_harian_mofas', [App\Http\Controllers\HomeController::class, 'graph_laporan_harian_mofas'])->name('graph_laporan_harian_mofas');
+Route::get('/graph_laporan_own_store', [App\Http\Controllers\HomeController::class, 'graph_laporan_own_store'])->name('graph_laporan_own_store');
 
 //SYnc Produk
 Route::get('/sync_produk', [App\Http\Controllers\SyncProdukController::class, 'index'])->name('sync_produk');
